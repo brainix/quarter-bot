@@ -1,4 +1,4 @@
-quarter-bot
+Quarter Bot
 ===========
 
 Flip a coin.
