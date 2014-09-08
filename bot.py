@@ -18,7 +18,7 @@ import tweepy
 PHRASES = ['coin flip', 'coin toss', '#FlipACoin']
 RESPONSES = ['Heads.', 'Tails.']
 
-TWITTER_SCREEN_NAME = os.environ['TWITTER_SCREEN_NAME']
+SCREEN_NAME = os.environ['TWITTER_SCREEN_NAME']
 CONSUMER_KEY = os.environ['TWITTER_API_KEY']
 CONSUMER_SECRET = os.environ['TWITTER_API_SECRET']
 ACCESS_TOKEN = os.environ['TWITTER_ACCESS_TOKEN']
@@ -37,7 +37,7 @@ class StreamListener(tweepy.StreamListener):
         print(data)
         tweet = json.loads(data)
         screen_name = tweet['user']['screen_name']
-        me = screen_name == TWITTER_SCREEN_NAME
+        me = screen_name == SCREEN_NAME
         retweet = 'retweeted_status' in tweet
         if not me and not retweet:
             response = random.choice(RESPONSES)
