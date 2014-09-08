@@ -16,7 +16,7 @@ import tweepy
 
 
 PHRASES = ['coin flip', 'coin toss', '#FlipACoin']
-RESPONSES = ['Heads.', 'Tails.']
+RESPONSES = ['Heads', 'Tails']
 
 SCREEN_NAME = os.environ['TWITTER_SCREEN_NAME']
 CONSUMER_KEY = os.environ['TWITTER_API_KEY']
@@ -41,7 +41,7 @@ class StreamListener(tweepy.StreamListener):
         retweet = 'retweeted_status' in tweet
         if not me and not retweet:
             response = random.choice(RESPONSES)
-            response = '@{0} {1} #FlipACoin'.format(screen_name, response)
+            response = '@{0} {1}. #FlipACoin'.format(screen_name, response)
             api.update_status(response, tweet['id'])
         return True
 
