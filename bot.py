@@ -42,7 +42,10 @@ class StreamListener(tweepy.StreamListener):
         if not me and not retweet:
             response = random.choice(RESPONSES)
             response = '@{0} {1}. #FlipACoin'.format(screen_name, response)
-            api.update_status(response, tweet['id'])
+            try:
+                api.update_status(response, tweet['id'])
+            except tweepy.TweepError:
+                pass
         return True
 
 
