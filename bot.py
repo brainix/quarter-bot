@@ -58,8 +58,7 @@ class StreamListener(tweepy.StreamListener):
             hashtag = random.choice(HASHTAGS)
             response = '@{0} {1}. #{2}'.format(screen_name, side, hashtag)
             try:
-                # api.update_status(response, tweet['id'])
-                print(response)
+                api.update_status(response, tweet['id'])
             except tweepy.TweepError:
                 pass
         return True
