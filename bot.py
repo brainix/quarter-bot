@@ -56,9 +56,9 @@ class StreamListener(tweepy.StreamListener):
         if not me and not retweet:
             side = random.choice(SIDES)
             hashtag = random.choice(HASHTAGS)
-            response = '@{0} {1}. #{2}'.format(screen_name, side, hashtag)
+            reply = '@{0} {1}. #{2}'.format(screen_name, side, hashtag)
             try:
-                api.update_status(response, tweet['id'])
+                api.update_status(reply, tweet['id'])
             except tweepy.TweepError:
                 pass
         return True
