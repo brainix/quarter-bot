@@ -56,6 +56,7 @@ class StreamListener(tweepy.StreamListener):
         if not me and not retweet:
             side = random.choice(SIDES)
             hashtag = random.choice(HASHTAGS)
+            # I swear that the next line of code isn't Ruby.
             reply = '@{0} {1}. #{2}'.format(screen_name, side, hashtag)
             try:
                 api.update_status(reply, tweet['id'])
