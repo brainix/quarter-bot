@@ -1,6 +1,6 @@
 #-----------------------------------------------------------------------------#
 #   Quarter Bot - A Twitter bot that flips a coin.                            #
-#   bot.py                                                                    #
+#   reply.py                                                                  #
 #                                                                             #
 #   Copyright (c) 2014, Seventy Four, Inc.                                    #
 #                                                                             #
@@ -20,25 +20,45 @@
 
 
 
-import os
+import json
+import random
 
 import tweepy
 
-
-
-ENV = os.environ['ENV']
-SCREEN_NAME = os.environ['TWITTER_SCREEN_NAME']
-CONSUMER_KEY = os.environ['TWITTER_API_KEY']
-CONSUMER_SECRET = os.environ['TWITTER_API_SECRET']
-ACCESS_TOKEN = os.environ['TWITTER_ACCESS_TOKEN']
-ACCESS_TOKEN_SECRET = os.environ['TWITTER_ACCESS_TOKEN_SECRET']
-
-PHRASES = ['coin flip', 'coin toss', 'heads tails', '#FlipACoin', '#HeadsOrTails']
-SIDES = ['Heads', 'Tails']
-HASHTAGS = ['FlipACoin', 'HeadsOrTails']
+import bot
 
 
 
-auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-api = tweepy.API(auth)
+class StreamListener(tweepy.StreamListener):
+    def on_data(self, data):
+        print('Incoming: {0}'.format(data))
+        tweet = json.loads(data)
+        screen_name = tweet['user']['screen_name']
+        me = screen_name == bot.SCREEN_NAME
+        retweet = 'retweeted_status' in tweet
+        if not me and not retweet:
+            side = random.choice(bot.SIDES)
+            hashtag = random.choice(bot.HASHTAGS)
+
+            # I swear that the next line of code isn't Ruby.
+            reply = '@{0} {1}. #{2}'.format(screen_name, side, hashtag)
+            print('Outgoing: {0}\n'.format(reply))
+
+            if bot.ENV == 'production':
+                try:
+                    bot.api.update_status(reply, tweet['id'])
+                except tweepy.TweepError:
+                    pass
+
+        # Return True to keep the stream listener listening.
+        return True
+
+
+
+def main():
+    listener = StreamListener()
+    stream = tweepy.Stream(bot.auth, listener)
+    stream.filter(track=bot.PHRASES)
+
+if __name__ == '__main__':
+    main()
