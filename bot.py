@@ -42,3 +42,14 @@ HASHTAGS = ['FlipACoin', 'HeadsOrTails']
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
+
+
+
+def get_items(*args, **kwargs):
+    cursor = tweepy.Cursor(*args, **kwargs)
+    pages = cursor.pages()
+    items = []
+    for page in pages:
+        items.extend(page)
+    items = set(items)
+    return items

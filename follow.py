@@ -20,24 +20,13 @@
 
 
 
-import tweepy
-
 import bot
 
 
 
-def get_items(*args, **kwargs):
-    cursor = tweepy.Cursor(*args, **kwargs)
-    pages = cursor.pages()
-    items = []
-    for page in pages:
-        items.extend(page)
-    items = set(items)
-    return items
-
 def main():
-    follower_ids = get_items(bot.api.followers_ids)
-    following_ids = get_items(bot.api.friends_ids)
+    follower_ids = bot.get_items(bot.api.followers_ids)
+    following_ids = bot.get_items(bot.api.friends_ids)
     diff = follower_ids - following_ids
     for user_id in diff:
         print('Following: {0}'.format(user_id))
