@@ -42,7 +42,7 @@ class StreamListener(tweepy.StreamListener):
 
             # I swear that the next line of code isn't Ruby.
             reply = '@{0} {1}. #{2}'.format(screen_name, side, hashtag)
-            print('Outgoing: {0}\n'.format(reply))
+            print('Outgoing: {0}'.format(reply))
 
             if bot.ENV == 'production':
                 try:
