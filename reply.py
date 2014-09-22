@@ -53,10 +53,11 @@ class StreamListener(tweepy.StreamListener):
             reply = u'@{0} {1}. #{2} {3}'.format(screen_name, side, hashtag, emoji)
             try:
                 log = u'Outgoing: {0}'.format(reply)
+                print(log)
             except UnicodeEncodeError:
                 log = bot.unicode_to_ascii(reply)
                 log = u'Outgoing: {0}'.format(log)
-            print(log)
+                print(log)
 
             if bot.ENV == 'production':
                 try:
