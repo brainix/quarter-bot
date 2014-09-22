@@ -29,6 +29,14 @@ import bot
 
 
 
+_EMOJI = [
+    u'\U0001F601',
+    u'\U0001F602',
+    u'\U0001F603',
+]
+
+
+
 class StreamListener(tweepy.StreamListener):
     def on_data(self, data):
         print('Incoming: {0}'.format(data))
@@ -39,10 +47,11 @@ class StreamListener(tweepy.StreamListener):
         if not me and not retweet:
             side = random.choice(bot.SIDES)
             hashtag = random.choice(bot.HASHTAGS)
+            emoji = random.choice(_EMOJI)
 
             # I swear that the next line of code isn't Ruby.
-            reply = '@{0} {1}. #{2}'.format(screen_name, side, hashtag)
-            print('Outgoing: {0}'.format(reply))
+            reply = u'@{0} {1}. #{2} {3}'.format(screen_name, side, hashtag, emoji)
+            print(u'Outgoing: {0}'.format(reply))
 
             if bot.ENV == 'production':
                 try:
