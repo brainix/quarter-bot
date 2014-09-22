@@ -21,6 +21,7 @@
 
 
 import os
+import unicodedata
 
 import tweepy
 
@@ -44,6 +45,12 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 
+
+def unicode_to_ascii(s):
+    s = unicodedata.normalize('NFKD', s)
+    s = s.encode('ascii', 'ignore')
+    s = s.strip()
+    return s
 
 def get_items(*args, **kwargs):
     cursor = tweepy.Cursor(*args, **kwargs)
