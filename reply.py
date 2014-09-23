@@ -26,14 +26,7 @@ import random
 import tweepy
 
 import bot
-
-
-
-_EMOJI = [
-    u'\U0001F601',
-    u'\U0001F602',
-    u'\U0001F603',
-]
+import emoji
 
 
 
@@ -47,10 +40,10 @@ class StreamListener(tweepy.StreamListener):
         if not me and not retweet:
             side = random.choice(bot.SIDES)
             hashtag = random.choice(bot.HASHTAGS)
-            emoji = random.choice(_EMOJI)
+            e = random.choice(emoji.EMOJI.values())
 
             # I swear that the next line of code isn't Ruby.
-            reply = u'@{0} {1}. #{2} {3}'.format(screen_name, side, hashtag, emoji)
+            reply = u'@{0} {1}. #{2} {3}'.format(screen_name, side, hashtag, e)
             try:
                 log = u'Outgoing: {0}'.format(reply)
                 print(log)
