@@ -24,12 +24,57 @@
 
 EMOJI = {
     # Weather, landscape, and sky symbols:
+    'CYCLONE':                                                  u'\U0001F300',
+    'FOGGY':                                                    u'\U0001F301',
+    'CLOSED UMBRELLA':                                          u'\U0001F302',
+    'NIGHT WITH STARS':                                         u'\U0001F303',
+    'SUNRISE OVER MOUNTAINS':                                   u'\U0001F304',
+    'SUNRISE':                                                  u'\U0001F305',
+    'CITYSCAPE AT DUSK':                                        u'\U0001F306',
+    'SUNSET OVER BUILDINGS':                                    u'\U0001F307',
+    'RAINBOW':                                                  u'\U0001F308',
+    'BRIDGE AT NIGHT':                                          u'\U0001F309',
+    'WATER WAVE':                                               u'\U0001F30A',
+    'VOLCANO':                                                  u'\U0001F30B',
+    'MILKY WAY':                                                u'\U0001F30C',
 
     # Globe symbols:
+    'EARTH GLOBE EUROPE-AFRICA':                                u'\U0001F30D',
+    'EARTH GLOBE AMERICAS':                                     u'\U0001F30E',
+    'EARTH GLOBE ASIA-AUSTRALIA':                               u'\U0001F30F',
+    'GLOBE WITH MERIDIANS':                                     u'\U0001F310',
 
     # Moon, sun, and star symbols:
+    'NEW MOON SYMBOL':                                          u'\U0001F311',
+    'WAXING CRESCENT MOON SYMBOL':                              u'\U0001F312',
+    'FIRST QUARTER MOON SYMBOL':                                u'\U0001F313',
+    'WAXING GIBBOUS MOON SYMBOL':                               u'\U0001F314',
+    'FULL MOON SYMBOL':                                         u'\U0001F315',
+    'WANING GIBBOUS MOON SYMBOL':                               u'\U0001F316',
+    'LAST QUARTER MOON SYMBOL':                                 u'\U0001F317',
+    'WANING CRESCENT MOON SYMBOL':                              u'\U0001F318',
+    'CRESCENT MOON':                                            u'\U0001F319',
+    'NEW MOON WITH FACE':                                       u'\U0001F31A',
+    'FIRST QUARTER MOON WITH FACE':                             u'\U0001F31B',
+    'LAST QUARTER MOON WITH FACE':                              u'\U0001F31C',
+    'FULL MOON WITH FACE':                                      u'\U0001F31D',
+    'SUN WITH FACE':                                            u'\U0001F31E',
+    'GLOWING STAR':                                             u'\U0001F31F',
+    'SHOOTING STAR':                                            u'\U0001F320',
 
     # Weather symbols:
+    # 'THERMOMETER':                                              u'\U0001F321',
+    # 'BLACK DROPLET':                                            u'\U0001F322',
+    # 'WHITE SUN':                                                u'\U0001F323',
+    # 'WHITE SUN WITH SMALL CLOUD':                               u'\U0001F324',
+    # 'WHITE SUN BEHIND CLOUD':                                   u'\U0001F325',
+    # 'WHITE SUN BEHIND CLOUD WITH RAIN':                         u'\U0001F326',
+    # 'CLOUD WITH RAIN':                                          u'\U0001F327',
+    # 'CLOUD WITH SNOW':                                          u'\U0001F328',
+    # 'CLOUD WITH LIGHTNING':                                     u'\U0001F329',
+    # 'CLOUD WITH TORNADO':                                       u'\U0001F32A',
+    # 'FOG':                                                      u'\U0001F32B',
+    # 'WIND BLOWING FACE':                                        u'\U0001F32C',
 
     # Plant symbols:
     'CHESTNUT':                                                 u'\U0001F330',
@@ -38,7 +83,7 @@ EMOJI = {
     'DECIDUOUS TREE':                                           u'\U0001F333',
     'PALM TREE':                                                u'\U0001F334',
     'CACTUS':                                                   u'\U0001F335',
-    'HOT PEPPER ':                                              u'\U0001F336',
+    # 'HOT PEPPER ':                                              u'\U0001F336',
     'TULIP':                                                    u'\U0001F337',
     'CHERRY BLOSSOM':                                           u'\U0001F338',
     'ROSE':                                                     u'\U0001F339',
@@ -117,7 +162,7 @@ EMOJI = {
     'BABY BOTTLE':                                              u'\U0001F37C',
 
     # Accommodation symbol:
-    'FORK AND KNIFE WITH PLATE':                                u'\U0001F37D',
+    # 'FORK AND KNIFE WITH PLATE':                                u'\U0001F37D',
 
     # Celebration symbols:
     'RIBBON':                                                   u'\U0001F380',
@@ -140,22 +185,22 @@ EMOJI = {
     'MOON VIEWING CEREMONY':                                    u'\U0001F391',
     'SCHOOL SATCHEL':                                           u'\U0001F392',
     'GRADUATION CAP':                                           u'\U0001F393',
-    'HEART WITH TIP ON THE LEFT':                               u'\U0001F394',
-    'BOUQUET OF FLOWERS':                                       u'\U0001F395',
-    'MILITARY MEDAL':                                           u'\U0001F396',
-    'REMINDER RIBBON':                                          u'\U0001F397',
+    # 'HEART WITH TIP ON THE LEFT':                               u'\U0001F394',
+    # 'BOUQUET OF FLOWERS':                                       u'\U0001F395',
+    # 'MILITARY MEDAL':                                           u'\U0001F396',
+    # 'REMINDER RIBBON':                                          u'\U0001F397',
 
     # Musical symbols:
-    'MUSICAL KEYBOARD WITH JACKS':                              u'\U0001F398',
-    'STUDIO MICROPHONE':                                        u'\U0001F399',
-    'LEVEL SLIDER':                                             u'\U0001F39A',
-    'CONTROL KNOBS':                                            u'\U0001F39B',
-    'BEAMED ASCENDING MUSICAL NOTES':                           u'\U0001F39C',
-    'BEAMED DESCENDING MUSICAL NOTES':                          u'\U0001F39D',
+    # 'MUSICAL KEYBOARD WITH JACKS':                              u'\U0001F398',
+    # 'STUDIO MICROPHONE':                                        u'\U0001F399',
+    # 'LEVEL SLIDER':                                             u'\U0001F39A',
+    # 'CONTROL KNOBS':                                            u'\U0001F39B',
+    # 'BEAMED ASCENDING MUSICAL NOTES':                           u'\U0001F39C',
+    # 'BEAMED DESCENDING MUSICAL NOTES':                          u'\U0001F39D',
 
     # Entertainment symbols:
-    'FILM FRAMES':                                              u'\U0001F39E',
-    'ADMISSION TICKETS':                                        u'\U0001F39F',
+    # 'FILM FRAMES':                                              u'\U0001F39E',
+    # 'ADMISSION TICKETS':                                        u'\U0001F39F',
     'CAROUSEL HORSE':                                           u'\U0001F3A0',
     'FERRIS WHEEL':                                             u'\U0001F3A1',
     'ROLLER COASTER':                                           u'\U0001F3A2',
@@ -199,30 +244,30 @@ EMOJI = {
     'SNOWBOARDER':                                              u'\U0001F3C2',
     'RUNNER':                                                   u'\U0001F3C3',
     'SURFER':                                                   u'\U0001F3C4',
-    'SPORTS MEDAL':                                             u'\U0001F3C5',
+    # 'SPORTS MEDAL':                                             u'\U0001F3C5',
     'TROPHY':                                                   u'\U0001F3C6',
     'HORSE RACING':                                             u'\U0001F3C7',
     'AMERICAN FOOTBALL':                                        u'\U0001F3C8',
     'RUGBY FOOTBALL':                                           u'\U0001F3C9',
     'SWIMMER':                                                  u'\U0001F3CA',
-    'WEIGHT LIFTER':                                            u'\U0001F3CB',
-    'GOLFER':                                                   u'\U0001F3CC',
-    'RACING MOTORCYCLE':                                        u'\U0001F3CD',
-    'RACING CAR':                                               u'\U0001F3CE',
+    # 'WEIGHT LIFTER':                                            u'\U0001F3CB',
+    # 'GOLFER':                                                   u'\U0001F3CC',
+    # 'RACING MOTORCYCLE':                                        u'\U0001F3CD',
+    # 'RACING CAR':                                               u'\U0001F3CE',
 
     # Buiding and map symbols:
-    'SNOW CAPPED MOUNTAIN':                                     u'\U0001F3D4',
-    'CAMPING':                                                  u'\U0001F3D5',
-    'BEACH WITH UMBRELLA':                                      u'\U0001F3D6',
-    'BUILDING CONSTRUCTION':                                    u'\U0001F3D7',
-    'HOUSE BUILDINGS':                                          u'\U0001F3D8',
-    'CITYSCAPE':                                                u'\U0001F3D9',
-    'DERELICT HOUSE BUILDING':                                  u'\U0001F3DA',
-    'CLASSICAL BUILDING':                                       u'\U0001F3DB',
-    'DESERT':                                                   u'\U0001F3DC',
-    'DESERT ISLAND':                                            u'\U0001F3DD',
-    'NATIONAL PARK':                                            u'\U0001F3DE',
-    'STADIUM':                                                  u'\U0001F3DF',
+    # 'SNOW CAPPED MOUNTAIN':                                     u'\U0001F3D4',
+    # 'CAMPING':                                                  u'\U0001F3D5',
+    # 'BEACH WITH UMBRELLA':                                      u'\U0001F3D6',
+    # 'BUILDING CONSTRUCTION':                                    u'\U0001F3D7',
+    # 'HOUSE BUILDINGS':                                          u'\U0001F3D8',
+    # 'CITYSCAPE':                                                u'\U0001F3D9',
+    # 'DERELICT HOUSE BUILDING':                                  u'\U0001F3DA',
+    # 'CLASSICAL BUILDING':                                       u'\U0001F3DB',
+    # 'DESERT':                                                   u'\U0001F3DC',
+    # 'DESERT ISLAND':                                            u'\U0001F3DD',
+    # 'NATIONAL PARK':                                            u'\U0001F3DE',
+    # 'STADIUM':                                                  u'\U0001F3DF',
     'HOUSE BUILDING':                                           u'\U0001F3E0',
     'HOUSE WITH GARDEN':                                        u'\U0001F3E1',
     'OFFICE BUILDING':                                          u'\U0001F3E2',
@@ -242,17 +287,17 @@ EMOJI = {
     'EUROPEAN CASTLE':                                          u'\U0001F3F0',
 
     # Flag symbols:
-    'WHITE PENNANT':                                            u'\U0001F3F1',
-    'BLACK PENNANT':                                            u'\U0001F3F2',
-    'WAVING WHITE FLAG':                                        u'\U0001F3F3',
-    'WAVING BLACK FLAG':                                        u'\U0001F3F4',
+    # 'WHITE PENNANT':                                            u'\U0001F3F1',
+    # 'BLACK PENNANT':                                            u'\U0001F3F2',
+    # 'WAVING WHITE FLAG':                                        u'\U0001F3F3',
+    # 'WAVING BLACK FLAG':                                        u'\U0001F3F4',
 
     # Rosettes:
-    'ROSETTE':                                                  u'\U0001F3F5',
-    'BLACK ROSETTE':                                            u'\U0001F3F6',
+    # 'ROSETTE':                                                  u'\U0001F3F5',
+    # 'BLACK ROSETTE':                                            u'\U0001F3F6',
 
     # Miscellaneous symbol:
-    'LABEL':                                                    u'\U0001F3F7',
+    # 'LABEL':                                                    u'\U0001F3F7',
 
     # Animal symbols:
     'RAT':                                                      u'\U0001F400',
@@ -322,11 +367,11 @@ EMOJI = {
 
     # Animal symbols:
     'PAW PRINTS':                                               u'\U0001F43E',
-    'CHIPMUNK':                                                 u'\U0001F43F',
+    # 'CHIPMUNK':                                                 u'\U0001F43F',
 
     # Facial parts symbols:
     'EYES':                                                     u'\U0001F440',
-    'EYE':                                                      u'\U0001F441',
+    # 'EYE':                                                      u'\U0001F441',
     'EAR':                                                      u'\U0001F442',
     'NOSE':                                                     u'\U0001F443',
     'MOUTH':                                                    u'\U0001F444',
