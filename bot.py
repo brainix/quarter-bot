@@ -47,6 +47,7 @@ api = tweepy.API(auth)
 
 
 def unicode_to_ascii(s):
+    # lol
     s = unicodedata.normalize('NFKD', s)
     s = s.encode('ascii', 'ignore')
     s = s.strip()
